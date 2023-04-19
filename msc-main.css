@@ -1,0 +1,295 @@
+html,body{
+    margin: 0;
+}
+.parent{
+    width: 100%;
+    height: 100%;   
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 35px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 315px;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px rgb(211, 211, 211);
+    margin: 2% 3%;
+}
+.header{
+    flex: 1;
+    border-radius:3px 3px 0px 0px;
+    width: 100%;
+    background-color: rgb(200, 35, 44);;
+}
+.log{
+    display: flex;
+    width: 30px;
+    justify-content: center;
+}
+.log .logo{
+    margin-top: 18px;
+    color: white;
+}
+#img{
+    position: absolute;
+    object-fit: cover;
+    top:25%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0px 2px 15px rgba(252, 156, 156, 0.5);
+}
+.profile{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 220px;
+    background: white;
+    border-radius:0px 0px 3px 3px ;
+}
+.profile .name{
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(115, 115, 115);
+    font-family: Playball;
+}
+.profile .about{
+    font-size: x-small;
+    color: rgb(193, 193, 193);
+    font-family: Nunito Sans;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0px 33px;
+}
+.profile .all{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    padding: 0px 35px;
+    color: rgb(193, 193, 193);
+}
+.cb{    
+    position: relative;
+    cursor: pointer;
+}
+input {
+    position: absolute;
+    top:0px;
+    right: 0px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top:0;
+    right: 0px; 
+    margin-top: 8px;
+    margin-right: 8px;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    border: 2px solid white;;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.cb input:checked ~ .checkmark:after {
+    display: block;
+}
+.cb .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.c2 .header{
+    background:rgb(66, 103, 178);
+}
+.c2 #img{
+    box-shadow: 0px 2px 15px rgb(161, 186, 236, 0.5);
+}
+.c3 .header{
+    background:rgb(188, 42, 141);
+}
+.c3 #img{
+    box-shadow: 0px 2px 15px rgb(254, 174, 227, 0.5);
+}
+.c4 .header{
+    background: rgb(5, 62, 255);
+}
+.c4 #img{
+    box-shadow: 0 2px 15px rgb(165, 171, 255, 0.5);
+}
+.c5 .header{
+    background:rgb(234, 76, 137);
+}
+.c5 #img{
+    box-shadow: 0 2px 15px rgb(254, 174, 227, 0.5);
+}
+.c6 .header{
+    background:rgb(29, 161, 242);
+}
+.c6 #img{
+    box-shadow: 0 2px 15px rgb(164, 219, 254, 0.5);
+}
+.c7 .header{
+    background:rgb(255, 128, 0);
+}
+.c7 #img{
+    box-shadow: 0 2px 15px rgb(255, 201, 180, 0.5);
+}
+.c8 .header{
+    background: rgb(0, 114, 177);
+}
+.c8 #img{
+    box-shadow: 0 2px 15px rgb(157, 221, 255, 0.5);
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 40px rgb(211, 211, 211);
+}
+input:checked ~ .header{
+    background: white;
+}
+.c1 input:checked ~ .header .log .logo{
+    color: rgb(200, 35, 44);
+}
+.c1 input:checked ~ .checkmark{
+    border: 2px solid rgb(200, 35, 44);
+}
+.c1 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(200, 35, 44);
+    border-width: 0 2px 2px 0;
+}
+.c1 input:checked ~ .profile{
+    background-color: rgb(200, 35, 44);
+}
+.c1 input:checked ~ .profile .name, .c1 input:checked ~ .profile .about, .c1 input:checked ~ .profile .all{
+    color: white;
+}
+.c2 input:checked ~ .header .log .logo{
+    color: rgb(66, 103, 178);
+}
+.c2 input:checked ~ .checkmark{
+    border: 2px solid rgb(66, 103, 178);
+}
+.c2 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(66, 103, 178);
+    border-width: 0 2px 2px 0;
+}
+.c2 input:checked ~ .profile{
+    background-color: rgb(66, 103, 178);
+}
+.c2 input:checked ~ .profile .name, .c2 input:checked ~ .profile .about, .c2 input:checked ~ .profile .all{
+    color: white;
+}
+.c3 input:checked ~ .header .log .logo{
+    color: rgb(188, 42, 141);
+}
+.c3 input:checked ~ .checkmark{
+    border: 2px solid rgb(188, 42, 141);
+}
+.c3 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(188, 42, 141);
+    border-width: 0 2px 2px 0;
+}
+.c3 input:checked ~ .profile{
+    background-color: rgb(188, 42, 141);
+}
+.c3 input:checked ~ .profile .name, .c3 input:checked ~ .profile .about, .c3 input:checked ~ .profile .all{
+    color: white;
+}
+.c4 input:checked ~ .header .log .logo{
+    color: rgb(5, 62, 255);
+}
+.c4 input:checked ~ .checkmark{
+    border: 2px solid rgb(5, 62, 255);
+}
+.c4 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(5, 62, 255);
+    border-width: 0 2px 2px 0;
+}
+.c4 input:checked ~ .profile{
+    background-color: rgb(5, 62, 255);
+}
+.c4 input:checked ~ .profile .name, .c4 input:checked ~ .profile .about, .c4 input:checked ~ .profile .all{
+    color: white;
+}
+.c5 input:checked ~ .header .log .logo{
+    color: rgb(234, 76, 137);
+}
+.c5 input:checked ~ .checkmark{
+    border: 2px solid rgb(234, 76, 137);
+}
+.c5 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(234, 76, 137);
+    border-width: 0 2px 2px 0;
+}
+.c5 input:checked ~ .profile{
+    background-color: rgb(234, 76, 137);
+}
+.c5 input:checked ~ .profile .name, .c5 input:checked ~ .profile .about, .c5 input:checked ~ .profile .all{
+    color: white;
+}
+.c6 input:checked ~ .header .log .logo{
+    color: rgb(29, 161, 242);
+}
+.c6 input:checked ~ .checkmark{
+    border: 2px solid rgb(29, 161, 242);
+}
+.c6 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(29, 161, 242);
+    border-width: 0 2px 2px 0;
+}
+.c6 input:checked ~ .profile{
+    background-color: rgb(29, 161, 242);
+}
+.c6 input:checked ~ .profile .name, .c6 input:checked ~ .profile .about, .c6 input:checked ~ .profile .all{
+    color: white;
+}
+.c7 input:checked ~ .header .log .logo{
+    color: rgb(255, 128, 0);
+}
+.c7 input:checked ~ .checkmark{
+    border: 2px solid rgb(255, 128, 0);
+}
+.c7 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(255, 128, 0);
+    border-width: 0 2px 2px 0;
+}
+.c7 input:checked ~ .profile{
+    background-color: rgb(255, 128, 0);
+}
+.c7 input:checked ~ .profile .name, .c7 input:checked ~ .profile .about, .c7 input:checked ~ .profile .all{
+    color: white;
+}
+.c8 input:checked ~ .header .log .logo{
+    color: rgb(0, 114, 177);
+}
+.c8 input:checked ~ .checkmark{
+    border: 2px solid rgb(0, 114, 177);
+}
+.c8 input:checked ~ .checkmark::after{
+    border: 2px solid rgb(0, 114, 177);
+    border-width: 0 2px 2px 0;
+}
+.c8 input:checked ~ .profile{
+    background-color: rgb(0, 114, 177);
+}
+.c8 input:checked ~ .profile .name, .c8 input:checked ~ .profile .about, .c8 input:checked ~ .profile .all{
+    color: white;
+}
